@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from "./components/Header";
 import { HeaderMainPageSection } from "./components/HeaderMainPageSection";
 import { EventsSection } from "./components/EventsSection";
