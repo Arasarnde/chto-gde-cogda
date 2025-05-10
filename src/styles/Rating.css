@@ -1,0 +1,180 @@
+.rating-page {
+  padding: 40px 12%;
+  background-color: #1c1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rating-title {
+  color: #fbfbfb;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.rating-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.rating-search {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.rating-search input {
+  font-size: 16px;
+  width: 100%;
+}
+
+.rating-search input::placeholder {
+  color: #666;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #0D4176;
+  border: none;
+  color: #fbfbfb;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #0D4176;
+}
+
+.rating-table {
+  margin-bottom: 30px;
+  overflow-x: auto;
+  position: relative;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #fbfbfb;
+  color: #fbfbfb;
+  table-layout: fixed;
+  z-index: 3;
+}
+
+thead th {
+  font-weight: 400;
+  background-color: #fbfbfb;
+  color: #1c1c1c;
+}
+
+th {
+  text-align: left;
+  padding: 15px;
+  background-color: #1C1C1C;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+th:nth-child(1) {
+  width: 10%;
+}
+
+th:nth-child(2) {
+  width: 20%;
+}
+
+th:nth-child(3) {
+  width: 40%;
+}
+
+th:nth-child(4),
+th:nth-child(5) {
+  width: 12.5%;
+}
+
+td {
+  padding: 15px;
+  font-size: 20px;
+  background-color: #1c1c1c;
+}
+
+/* Центрирование текста в 1-м, 4-м и 5-м столбцах */
+td:nth-child(1),
+td:nth-child(4),
+td:nth-child(5),
+th:nth-child(1),
+th:nth-child(4),
+th:nth-child(5) {
+  text-align: center;
+}
+
+tbody tr {
+  transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+  background-color: #333333;
+  cursor: pointer;
+  position: relative;
+}
+
+tbody tr:hover td {
+  color: #ffffff;
+  background-color: #333333;
+}
+
+.show-more-button {
+  margin: 0 auto;
+  padding: 12px 30px;
+  background-color: transparent;
+  border: 1px solid #fbfbfb;
+  color: #fbfbfb;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.show-more-button:hover {
+  background-color: #0D4176;
+  color: #fbfbfb;
+}
+
+@media (max-width: 768px) {
+  .rating-controls {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .rating-search {
+    flex-direction: column;
+  }
+
+  .rating-search input {
+    width: 100%;
+  }
+
+  .rating-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .rating-table {
+    margin: 0 -20px;
+    width: calc(100% + 40px);
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}

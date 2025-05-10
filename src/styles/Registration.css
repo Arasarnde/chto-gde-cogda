@@ -1,0 +1,119 @@
+.registration-page {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  background-color: #1c1c1c;
+}
+
+.registration-container {
+  width: 100%;
+  max-width: 700px;
+}
+
+.registration-title {
+  margin-bottom: 1px;
+  color: #fbfbfb;
+  text-align: center;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 25px 0;
+  align-items: center;
+}
+
+.form-group {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.form-group label {
+  color: #fbfbfb;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.form-group-switch {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.form-group input {
+  width: -webkit-fill-available;
+  font-size: 20px;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: #aeaeae;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #aeaeae;
+  box-shadow: 0 0 0 2px rgba(255, 228, 225, 0.1);
+}
+
+.switch-label {
+  width: -webkit-fill-available;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  color: #fbfbfb;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.switch-input {
+  width: auto;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #aeaeae;
+}
+
+.login-link {
+  text-align: center;
+  color: #aeaeae;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.login-link a {
+  color: #aeaeae;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #E4E4E4;
+}
+
+
+@media (max-width: 480px) {
+  .registration-container {
+    padding: 30px 20px;
+  }
+
+  .registration-title {
+    font-size: 28px;
+  }
+
+  .form-group input,
+  .form-group input::placeholder,
+  .switch-label,
+  .login-link {
+    font-size: 16px;
+  }
+}

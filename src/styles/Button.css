@@ -1,0 +1,80 @@
+/* Общие стили для всех кнопок */
+.button {
+  font-family: 'Bahnschrift Condensed', sans-serif;
+  font-size: 20px;
+  padding: 10px 35px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: none;
+  text-decoration: none;
+}
+
+.button:not(:disabled):before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: all 0.5s ease;
+}
+
+.button:not(:disabled):hover {
+  background-color: #0D4176;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #fbfbfb;
+}
+
+.button:not(:disabled):hover:before {
+  left: 100%;
+}
+
+/* Белая кнопка */
+.button--white {
+  background-color: #fbfbfb;
+  border: 1px solid #fbfbfb;
+  color: #1c1c1c;
+}
+
+/* Черная кнопка */
+.button--black {
+  background-color: #1c1c1c;
+  border: 1px solid #1c1c1c;
+  color: #fbfbfb;
+}
+
+/* Кнопка с белой обводкой */
+.button--outlined {
+  background-color: transparent;
+  color: #fbfbfb;
+  border: 1px solid #fbfbfb;
+}
+
+.button--outlined-black {
+  background-color: transparent;
+  color: #1c1c1c;
+  border: 1px solid #1c1c1c;
+}
+
+.button:not(:disabled):hover {
+  border-color: #0D4176;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+  background-color: #aeaeae;
+  border: 1px solid #aeaeae;
+  box-shadow: none;
+}

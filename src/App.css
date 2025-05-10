@@ -1,0 +1,35 @@
+h1, h2, h3, h4, h5, h6, p, li, ol, ul, button, a, span, div, img, body, input, textarea {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bahnschrift Condensed', sans-serif;
+  font-weight: 100;
+  font-stretch: 75%;
+  line-height: normal;
+}
+
+body {
+  background-color: #FBFBFB;
+  color: #1C1C1C;
+}
+
+h1, h2 {
+  font-size: 80px;
+}
+
+section {
+  padding: 40px 0 80px 0;
+}
+
+section h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Bahnschrift Condensed';
+  src: url('./assets/fonts/BAHNSCHRIFT.TTF') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 50% 100%;
+  font-style: normal;
+}
+

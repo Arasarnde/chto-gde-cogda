@@ -1,0 +1,277 @@
+.header-container {
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 5%;
+    font-family: 'Bahnschrift Condensed', sans-serif;
+  }
+  
+  .header-container--bordered {
+    background-color: #1c1c1c;
+    border-bottom: 1px solid #fbfbfb;
+    position: relative;
+  }
+
+  /* Стили для хедера на главной странице */
+  .main-page .header-container {
+    background-color: transparent;
+    position: absolute;
+    border-bottom: none;
+  }
+  
+  .menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-toggle:hover {
+    transform: scale(1.1);
+  }
+
+  .logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-container:hover {
+    transform: translateX(-50%) scale(1.05);
+  }
+
+  .header-logo {
+    height: 90px;
+    transition: transform 0.3s ease;
+  }
+  
+  .header-logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .logo-container a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .auth-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .auth-button {
+    text-decoration: none;
+    padding: 0.5rem 1rem !important;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 18px !important;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 998;
+    animation: fadeIn 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .navigation-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    min-width: 25%;
+    max-width: 50%;
+    height: 100vh;
+    background: #fbfbfb;
+    color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    padding: 72px 54px;
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+  }
+  
+  .navigation-menu--open {
+    left: 0;
+  }
+  
+  .menu-header {
+    font-size: 32px;
+    display: flex;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  
+  .menu-title {
+    display: block;
+    font-weight: 300;
+  }
+  
+  .menu-navigation a {
+    margin-left: 16px;
+    font-size: 16px;
+    text-decoration: underline;
+    color: #1c1c1c;
+    font-weight: 300;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-navigation a:hover {
+    color: #464646;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    flex: 1;
+  }
+  
+  .menu-item {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    transform: translateX(10px);
+  }
+  
+  .menu-item a {
+    color: #1c1c1c;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-item a:hover {
+    color: #464646;
+  }
+  
+  .social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #1c1c1c;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    bottom: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .social-link:hover {
+    background: #0D4176;
+    border-color: #0D4176;
+    transform: scale(1.1);
+  }
+  
+  .social-icon {
+    transition: all 0.3s ease;
+  }
+
+  .social-icon:hover {
+    content: url(../assets/images/vk.svg);
+  }
+
+  
+  .social-link:hover .social-icon {
+    transform: scale(1.1);
+  }
+  
+  .menu-close {
+    position: absolute;
+    top: 30px;
+    right: -55px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1c1c1c;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-close:hover {
+    transform: rotate(90deg);
+    color: #464646;
+  }
+  
+  .submenu-container {
+    position: relative;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1c1c1c;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .submenu.open {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  .submenu a {
+    display: block;
+    padding: 8px 12px;
+    color: #1c1c1c;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 300;
+    font-size: 20px;
+  }
+  
+  .submenu a:hover {
+    background-color: rgba(255, 228, 225, 0.1);
+    color: #464646;
+    transform: translateX(5px);
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  body.menu-open {
+    overflow: hidden;
+    padding-right: 6px;
+  }
+  

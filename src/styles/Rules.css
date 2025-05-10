@@ -1,0 +1,53 @@
+.rules-page {
+  background-color: #1c1c1c;
+  color: #fbfbfb;
+}
+
+.rules-title {
+  padding: 60px 12% 30px;
+  color: #fbfbfb;
+}
+
+.rules-section {
+  margin: 0;
+  padding: 0;
+}
+
+.rules-content {
+  padding: 0 12% 88px;
+  display: grid;
+  gap: 35px;
+}
+
+.rules-section h2 {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.rules-section p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.rules-section p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .rules-page {
+    padding: 100px 15px 40px;
+  }
+
+  .rules-title {
+    font-size: 2rem;
+  }
+
+  .rules-section {
+    padding: 1.5rem;
+  }
+
+  .rules-section h2 {
+    font-size: 1.25rem;
+  }
+} 

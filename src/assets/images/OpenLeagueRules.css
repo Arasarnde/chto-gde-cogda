@@ -1,0 +1,120 @@
+.rules-page {
+  padding: 80px 20px;
+  background-color: #000;
+  font-family: 'Bahnschrift Condensed', sans-serif;
+}
+
+.rules-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rules-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.rules-title {
+  font-size: 64px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.rules-subtitle {
+  font-size: 40px;
+  color: #999;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.rules-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.rules-section {
+  background: #1C1C1C;
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rules-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.section-content {
+  color: #999;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.rules-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rules-list li {
+  margin-bottom: 12px;
+  padding-left: 24px;
+  position: relative;
+  color: #999;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.rules-list li:before {
+  content: "•";
+  color: #FFE4E1;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .rules-page {
+    padding: 40px 20px;
+  }
+
+  .rules-title {
+    font-size: 40px;
+  }
+
+  .rules-subtitle {
+    font-size: 32px;
+  }
+
+  .rules-content {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-content {
+    font-size: 16px;
+  }
+
+  .rules-list li {
+    font-size: 16px;
+  }
+} 

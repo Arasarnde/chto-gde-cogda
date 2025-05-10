@@ -1,0 +1,281 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  overflow-y: auto;
+  padding: 60px 0;
+}
+
+/* Стиль для body при открытом модальном окне */
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  background-color: #fbfbfb;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  padding: 32px 40px;
+  animation: modalAppear 0.3s ease-out;
+  margin: 0 auto 50px auto;
+  overflow: visible;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 32px;
+  right: 40px;
+  background: none;
+  border: none;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.modal-close:hover {
+  transform: rotate(90deg);
+}
+
+.modal-close img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-title {
+  color: #1c1c1c;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.modal-title-center {
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.modal-button {
+  min-width: 40%;
+  width: fit-content;
+  margin: auto;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-description {
+  margin-bottom: 20px;
+  color: #1c1c1c;
+  font-size: 14px;
+}
+
+.form-group-switch .checkbox {
+  padding-left: 40px;
+}
+
+.access-code-row {
+  display: flex;
+  align-items: center;
+  background: #e4e4e4;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.access-code {
+  letter-spacing: 1px;
+  flex: 1;
+  user-select: all;
+}
+
+.refresh-code-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.refresh-code-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.players-input {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.players-input input {
+  flex: 1;
+}
+
+.players-input button {
+  width: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-players {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.player-tag {
+  display: flex;
+  gap: 10px;
+  padding: 6px 12px;
+  background-color: #1c1c1c;
+  font-size: 14px;
+}
+
+.remove-player {
+  margin-top: 4.7px;
+  width: 8.5px;
+  height: 8.5px;
+  background: none;
+  border: none;
+  color: #fbfbfb;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-player:hover rect {
+  fill: #ff6759;
+}
+
+.success-message {
+  padding: 50px 50px 20px ;
+  font-size: 20px;
+  text-align: left;
+}
+
+.modal-form-switch-checkbox {
+  color: #1c1c1c;
+}
+
+.modal-form-switch-checkmark {
+  border-color: #1c1c1c;
+}
+
+.modal-form-switch-checkmark:after {
+  border-color: #1c1c1c;
+}
+
+.modal-form-switch-checkmark:hover {
+  border-color: #aeaeae;
+}
+
+.modal-form-switch-checkmark:hover:after {
+  border-color: #aeaeae;
+}
+
+
+.small-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aeaeae;
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    margin: 20px;
+    padding: 30px 20px;
+    max-height: calc(100vh - 40px);
+  }
+
+  .modal-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.teams-dropdown,
+.players-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fbfbfb;
+  border: 1px solid #aeaeae;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 4px;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #1c1c1c;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.personal-policy-modal {
+  font-size: 16px;
+}
+.personal-policy-modal ol {
+  padding: 0 24px;
+}
+.personal-policy-modal li {
+  margin: 10px 0;
+}

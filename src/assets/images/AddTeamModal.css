@@ -1,0 +1,155 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: #1C1C1C;
+  padding: 40px;
+  border-radius: 8px;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  animation: modalAppear 0.3s ease-out;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s;
+}
+
+.modal-close:hover {
+  color: #fff;
+}
+
+.modal-title {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #D19B4C;
+  color: #fff;
+}
+
+.modal-button:hover {
+  background-color: #B8860B;
+}
+
+.modal-button--secondary {
+  background-color: transparent;
+  border: 1px solid #D19B4C;
+  color: #D19B4C;
+}
+
+.modal-button--secondary:hover {
+  background-color: rgba(209, 155, 76, 0.1);
+}
+
+.team-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  margin: 0;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #D19B4C;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #D19B4C;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #B8860B;
+}
+
+.back-button {
+  width: 100%;
+  padding: 14px;
+  background-color: transparent;
+  color: #666;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  border-color: #666;
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    margin: 20px;
+    padding: 30px 20px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+} 

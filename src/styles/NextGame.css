@@ -1,0 +1,87 @@
+.next-game-section {
+  background-color: #fbfbfb;
+  color: #1c1c1c;
+  padding: 40px 0 40px;
+}
+
+.game-details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 70px;
+  align-items: start;
+  margin: 0 15%;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-type {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.game-date {
+  font-size: 20px;
+  margin: 0;
+}
+
+.game-location,
+.game-time,
+.game-cost {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+.location-icon,
+.time-icon,
+.cost-icon {
+  width: 15px;
+  height: auto;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+
+.secondary-text-game {
+  font-size: 16px;
+  color: #7e7e7e;
+}
+
+.register-button-game {
+  margin-top: 30px;
+}
+
+.all-games-button {
+  margin-top: 20px;
+}
+
+.game-map {
+  background-color: #4a5568;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Стили для темной темы карты */
+.game-map [class*="ground-pane"] {
+  filter: invert(95%) hue-rotate(180deg) brightness(65%) contrast(90%);
+}
+
+.game-map [class*="copyrights-pane"] {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .next-game-section {
+    padding: 40px 20px;
+  }
+
+  .game-details {
+    grid-template-columns: 1fr;
+  }
+} 

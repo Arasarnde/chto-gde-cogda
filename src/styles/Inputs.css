@@ -1,0 +1,125 @@
+/* Общие стили для инпутов */
+.input {
+  width: -webkit-fill-available;
+  padding: 12px 16px;
+  border: 1px solid #fbfbfb;
+  background-color: #1c1c1c;
+  color: #fbfbfb;
+  font-size: 20px;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.input::placeholder {
+  color: #aeaeae;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #aeaeae;
+  box-shadow: 0 0 0 2px rgba(255, 228, 225, 0.1);
+}
+
+.input--black {
+  border: 1px solid #1c1c1c;
+  background-color: #fbfbfb;
+  color: #1c1c1c;
+}
+
+/* Цвета валидации только после blur */
+.input--valid {
+  border-color: #14BD14 !important;
+  box-shadow: 0 0 0 2px rgba(20, 189, 20, 0.15);
+}
+.input--invalid {
+  border-color: #B32D20 !important;
+  box-shadow: 0 0 0 2px rgba(179, 45, 32, 0.10);
+}
+
+/* Общие стили для чекбоксов */
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  color: #fbfbfb;
+  font-size: 20px;
+  font-weight: 300;
+  padding-left: 55px;
+  transition: color 0.3s ease;
+}
+
+.checkbox--black {
+  color: #1c1c1c;
+}
+
+.checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox .checkmark {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 1px solid #fbfbfb;
+  transition: all 0.3s ease;
+}
+
+.checkbox--black .checkmark {
+  border-color: #1c1c1c;
+}
+
+.checkbox:hover .checkmark {
+  border-color: #aeaeae;
+}
+
+.checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 8px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #fbfbfb;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.checkbox--black .checkmark:after {
+  border-color: #1c1c1c;
+}
+
+.checkbox:hover .checkmark:after {
+  border: solid #aeaeae;
+  border-width: 0 1px 1px 0;
+}
+
+.checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox input[type="checkbox"]:disabled ~ .checkmark {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Медиа-запросы */
+@media (max-width: 480px) {
+  .input,
+  .input::placeholder,
+  .checkbox {
+    font-size: 16px;
+  }
+} 

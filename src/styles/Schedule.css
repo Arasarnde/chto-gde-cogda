@@ -1,0 +1,250 @@
+:root {
+  --card-bg-light: #fbfbfb;
+  --card-bg-dark: #3D4349;
+  --card-text-light: #1c1c1c;
+  --card-text-dark: #fbfbfb;
+  --card-secondary-text-light: #757575;
+  --card-secondary-text-dark: #aeaeae;
+}
+
+.schedule-page {
+  background-color: #1c1c1c;
+  color: #fbfbfb;
+  padding: 48px 12% 60px;
+}
+
+.schedule-title {
+  margin-bottom: 30px;
+}
+
+.schedule-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 70px;
+}
+
+.schedule-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: fit-content;
+  /*position: sticky;*/
+  top: 100px;
+}
+
+.filter-section {
+  padding: 35px;
+  background-color: #3D4349;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  position: relative;
+  padding-left: 45px;
+}
+
+.filter-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.filter-checkbox .checkmark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 1px solid #fbfbfb;
+  transition: all 0.3s ease;
+}
+
+.filter-checkbox:hover .checkmark {
+  border-color: #aeaeae;
+}
+
+.filter-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 8px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #fbfbfb;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.filter-checkbox:hover .checkmark:after {
+  border: solid #aeaeae;
+  border-width: 0 1px 1px 0;
+}
+
+.filter-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+  display: block;
+}
+
+.filter-checkbox input[type="checkbox"]:disabled ~ .checkmark {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tournaments-grid {
+  height: min-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px;
+}
+
+.tournaments-grid button {
+  margin-top: 25px;
+}
+
+.tournament-card {
+  background-color: var(--card-bg-light);
+  color: var(--card-text-light);
+  padding: 35px 37px 25px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tournament-card.dark-theme {
+  background-color: var(--card-bg-dark);
+  color: var(--card-text-dark);
+}
+
+.tournament-card.dark-theme .tournament-date,
+.tournament-card.dark-theme .secondary-text {
+  color: var(--card-secondary-text-dark);
+}
+
+.tournament-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Отключаем анимацию для карточек в профиле */
+.profile-page .tournament-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.tournament-type {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.tournament-date {
+  font-size: 20px;
+  margin-bottom: 4px;
+  color: #757575;
+}
+
+.tournament-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.detail-icon {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.primary-text {
+  font-size: 20px;
+  margin: 0;
+}
+
+.secondary-text {
+  font-size: 16px;
+  color: #757575;
+}
+
+.tournament-status {
+  margin-top: auto;
+  padding: 8px 0;
+}
+
+.status-available {
+  color: #4CAF50;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.status-full {
+  color: #f44336;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.register-button {
+  width: 100%;
+}
+
+.register-button:disabled {
+  background-color: #aeaeae;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1400px) {
+  .tournaments-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1200px) {
+  .schedule-page {
+    padding: 100px 5% 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .schedule-content {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-filters {
+    position: static;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule-page {
+    padding: 100px 20px 40px;
+  }
+
+  .schedule-title {
+    font-size: 32px;
+  }
+
+  .tournament-card {
+    padding: 20px;
+  }
+
+  .tournament-type {
+    font-size: 28px;
+  }
+
+  .primary-text {
+    font-size: 18px;
+  }
+} 
