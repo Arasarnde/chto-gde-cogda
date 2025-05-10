@@ -24,7 +24,7 @@ import "./styles/Button.css";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/chto-gde-cogda">
       <div className="bg-black text-white">
         <ScrollToTopButton />
         <Routes>
